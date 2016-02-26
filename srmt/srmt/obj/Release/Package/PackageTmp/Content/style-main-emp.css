@@ -1,0 +1,102 @@
+* {
+  font-family: Trebuchet MS, Arial, Georgia, Times New Roman;
+  }
+  
+body { font-size: 10pt;
+       color: #000000;
+  }
+
+/*
+ * FOOTER - stick to the bottom of the page
+ */
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -3em;
+}
+#footer, .push{
+	text-align:center;
+	height: 3em;
+	padding-top: 1em;
+}
+html, body {
+  height: 100%;
+}
+
+table   { width:100%; }
+
+caption {
+  background: #e8e8e8;
+}
+
+/* TOP NAVIGATION FORMATTING AND PRESENTATION STYLES */
+ul.srmtNavigation {
+  list-style-type: none;
+  overflow: auto; /* hack to make firefox happy w/ HTML 4.01 */
+  _overflow: none; /* hack to make ie ignore above FF hack */
+  _height: 1px; /* hack to make ie behave */
+  margin: 0px;
+  padding: 3px 0px 3px 3px;
+  text-align: left;
+  background: #000033;
+  }
+ul.srmtNavigation li {
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 3px;
+  }
+
+    body {
+        padding-top: 70px;
+    }
+
+    div.list-group {
+        background-color: #337ab7;
+        color: #fff;
+        border-color: #204d74;
+        text-align: center;
+        font-size: 125%;
+    }
+
+    div.list-group > p.list-group-item:first-child {
+            padding-top: 70px;
+            background-color: #286090;
+            border-color: #204d74;
+            font-size: 300%;
+        }
+
+    .badge {
+        background-color: #FAFAD2;
+        color: #FF8C00;
+    }
+.my-btn {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+.my-btn:hover, .my-btn:focus, .my-btn:active, .my-btn.active, .open > .my-btn.dropdown-toggle {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.my-btn:active, .my-btn.active, .open > .my-btn.dropdown-toggle {
+  background-image: none;
+}
+.my-btn.disabled, .my-btn.disabled:hover, .my-btn.disabled:focus, .my-btn.disabled:active, .my-btn.disabled.active, .my-btn[disabled], .my-btn[disabled]:hover, .my-btn[disabled]:focus, .my-btn[disabled]:active, .my-btn[disabled].active, fieldset[disabled] .my-btn, fieldset[disabled] .my-btn:hover, fieldset[disabled] .my-btn:focus, fieldset[disabled] .my-btn:active, fieldset[disabled] .my-btn.active {
+  background-color: #000;
+  border-color: #333;
+}
+.my-btn .badge {
+  color: #000;
+  background-color: #fff;
+}
+.my-btn:hover, .my-btn:focus, .my-btn.focus, .my-btn:active, .my-btn.active, .open > .my-btn.dropdown-toggle {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}

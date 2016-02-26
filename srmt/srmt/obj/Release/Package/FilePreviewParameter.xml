@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Default WebSite/srmt" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\CRIS\\Development\\SRMT-master\\srmt\\srmt\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\CRIS\\Development\\SRMT-master\\srmt\\srmt\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="CRIDBAEntities-Web.config Connection String" description="" value="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=Oracle.ManagedDataAccess.Client;provider connection string=&quot;DATA SOURCE=CRISDEV1;PASSWORD=myora600;USER ID=CRIDBA&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\CRIS\\Development\\SRMT-master\\srmt\\srmt\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CRIDBAEntities']/@connectionString" />
+  </parameter>
+  <parameter name="Entities-Web.config Connection String" description="" value="provider=Oracle.ManagedDataAccess.Client;provider connection string=&quot;DATA SOURCE=CRISDEV1;PASSWORD=myora600;USER ID=CRIDBA&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\CRIS\\Development\\SRMT-master\\srmt\\srmt\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Entities']/@connectionString" />
+  </parameter>
+  <parameter name="OraAspNetConString-Web.config Connection String" description="" value="User Id=cridba;Password=myora600;Data Source=CRISDEV1" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\CRIS\\Development\\SRMT-master\\srmt\\srmt\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='OraAspNetConString']/@connectionString" />
+  </parameter>
+  <parameter name="ProfileEntities-Web.config Connection String" description="" value="metadata=res://*/Models.ProfileModel.csdl|res://*/Models.ProfileModel.ssdl|res://*/Models.ProfileModel.msl;provider=Oracle.ManagedDataAccess.Client;provider connection string=&quot;DATA SOURCE=CRISDEV1;PASSWORD=myora600;USER ID=CRIDBA&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\CRIS\\Development\\SRMT-master\\srmt\\srmt\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ProfileEntities']/@connectionString" />
+  </parameter>
+</parameters>

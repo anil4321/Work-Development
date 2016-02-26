@@ -1,0 +1,104 @@
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\roslyn\csc.exe
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\roslyn\vbc.exe
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\roslyn\VBCSCompiler.exe
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\srmt.dll.config
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\srmt.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\srmt.pdb
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\Antlr3.Runtime.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\EntityFramework.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\EntityFramework.SqlServer.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\Newtonsoft.Json.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\Oracle.ManagedDataAccess.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\Oracle.Web.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\System.Web.Helpers.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\System.Web.Mvc.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\System.Web.Optimization.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\System.Web.Razor.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\System.Web.WebPages.Deployment.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\System.Web.WebPages.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\System.Web.WebPages.Razor.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\WebGrease.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\EntityFramework.xml
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\EntityFramework.SqlServer.xml
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\System.Web.Helpers.xml
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\System.Web.Mvc.xml
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\System.Web.Optimization.xml
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\System.Web.Razor.xml
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\System.Web.WebPages.xml
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\System.Web.WebPages.Deployment.xml
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\System.Web.WebPages.Razor.xml
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\Antlr3.Runtime.pdb
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\Newtonsoft.Json.xml
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\obj\Debug\srmt.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\obj\Debug\srmt.pdb
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\obj\Debug\srmt.csprojResolveAssemblyReference.cache
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\Microsoft.Owin.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\Microsoft.Owin.Security.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\Owin.dll
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\Microsoft.Owin.xml
+C:\Users\anil4\onedrive\documents\visual studio 2015\Projects\srmt\srmt\bin\Microsoft.Owin.Security.xml
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\roslyn\csc.exe
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\roslyn\System.Collections.Immutable.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\roslyn\System.Reflection.Metadata.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\roslyn\vbc.exe
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\roslyn\VBCSCompiler.exe
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\roslyn\VBCSCompiler.exe.config
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\srmt.dll.config
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\srmt.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\srmt.pdb
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\Antlr3.Runtime.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\EntityFramework.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\EntityFramework.SqlServer.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\Microsoft.Owin.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\Microsoft.Owin.Security.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\Microsoft.Web.Infrastructure.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\Newtonsoft.Json.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\Oracle.ManagedDataAccess.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\Oracle.Web.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\Owin.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\System.Web.Helpers.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\System.Web.Mvc.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\System.Web.Optimization.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\System.Web.Razor.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\System.Web.WebPages.Deployment.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\System.Web.WebPages.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\System.Web.WebPages.Razor.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\WebGrease.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\EntityFramework.xml
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\EntityFramework.SqlServer.xml
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\Microsoft.Owin.xml
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\Microsoft.Owin.Security.xml
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\System.Web.Helpers.xml
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\System.Web.Mvc.xml
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\System.Web.Optimization.xml
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\System.Web.Razor.xml
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\System.Web.WebPages.xml
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\System.Web.WebPages.Deployment.xml
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\System.Web.WebPages.Razor.xml
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\Antlr3.Runtime.pdb
+C:\CRIS\Development\SRMT-master\srmt\srmt\bin\Newtonsoft.Json.xml
+C:\CRIS\Development\SRMT-master\srmt\srmt\obj\Debug\srmt.dll
+C:\CRIS\Development\SRMT-master\srmt\srmt\obj\Debug\srmt.pdb
+C:\CRIS\Development\SRMT-master\srmt\srmt\obj\Debug\srmt.csprojResolveAssemblyReference.cache

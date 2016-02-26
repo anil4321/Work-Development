@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="ProfileEntities">
+    <EntitySetMapping Name="CRIS_USER">
+      <EntityTypeMapping TypeName="Model.CRIS_USER">
+        <MappingFragment StoreEntitySet="CRIS_USER">
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="LOGIN_NAME" ColumnName="LOGIN_NAME" />
+          <ScalarProperty Name="USER_PASSWORD" ColumnName="USER_PASSWORD" />
+          <ScalarProperty Name="USER_EMAIL" ColumnName="USER_EMAIL" />
+          <ScalarProperty Name="RETRY_ATTEMPTS" ColumnName="RETRY_ATTEMPTS" />
+          <ScalarProperty Name="USER_STATUS" ColumnName="USER_STATUS" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="LAST_UPDATE_BY" ColumnName="LAST_UPDATE_BY" />
+          <ScalarProperty Name="LAST_UPDATE_DATE" ColumnName="LAST_UPDATE_DATE" />
+          <ScalarProperty Name="PASSWORD_CHANGE_DATE" ColumnName="PASSWORD_CHANGE_DATE" />
+          <ScalarProperty Name="PASSWORD_EXP_DATE" ColumnName="PASSWORD_EXP_DATE" />
+          <ScalarProperty Name="USER_QUESTION" ColumnName="USER_QUESTION" />
+          <ScalarProperty Name="USER_ANSWER" ColumnName="USER_ANSWER" />
+          <ScalarProperty Name="ENC_DEC_KEY" ColumnName="ENC_DEC_KEY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPLOYEEs">
+      <EntityTypeMapping TypeName="Model.EMPLOYEE">
+        <MappingFragment StoreEntitySet="EMPLOYEE">
+          <ScalarProperty Name="EMPL_ID" ColumnName="EMPL_ID" />
+          <ScalarProperty Name="EMPL_TYPE_ID" ColumnName="EMPL_TYPE_ID" />
+          <ScalarProperty Name="SERV_CENTER_ID" ColumnName="SERV_CENTER_ID" />
+          <ScalarProperty Name="OFFICE_ID" ColumnName="OFFICE_ID" />
+          <ScalarProperty Name="FCO_DESIGN_CD" ColumnName="FCO_DESIGN_CD" />
+          <ScalarProperty Name="EMPL_ZIPCODE" ColumnName="EMPL_ZIPCODE" />
+          <ScalarProperty Name="EMPL_FNAME" ColumnName="EMPL_FNAME" />
+          <ScalarProperty Name="EMPL_MNAME" ColumnName="EMPL_MNAME" />
+          <ScalarProperty Name="EMPL_LNAME" ColumnName="EMPL_LNAME" />
+          <ScalarProperty Name="EMPL_SSN" ColumnName="EMPL_SSN" />
+          <ScalarProperty Name="EMPL_TITLE" ColumnName="EMPL_TITLE" />
+          <ScalarProperty Name="EMPL_SUPERVISOR" ColumnName="EMPL_SUPERVISOR" />
+          <ScalarProperty Name="EMPL_WORK_PH_NUM" ColumnName="EMPL_WORK_PH_NUM" />
+          <ScalarProperty Name="EMPL_HOME_PH_NUM" ColumnName="EMPL_HOME_PH_NUM" />
+          <ScalarProperty Name="EMPL_WORK_FAX_NUM" ColumnName="EMPL_WORK_FAX_NUM" />
+          <ScalarProperty Name="EMPL_EMAIL_ADDR" ColumnName="EMPL_EMAIL_ADDR" />
+          <ScalarProperty Name="EMPL_DOB" ColumnName="EMPL_DOB" />
+          <ScalarProperty Name="EMPL_MOTHER_NM" ColumnName="EMPL_MOTHER_NM" />
+          <ScalarProperty Name="EMPL_STATUS" ColumnName="EMPL_STATUS" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+          <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />
+          <ScalarProperty Name="LAST_UPDATED_BY" ColumnName="LAST_UPDATED_BY" />
+          <ScalarProperty Name="LAST_UPDATED_DATE" ColumnName="LAST_UPDATED_DATE" />
+          <ScalarProperty Name="EMPL_UID" ColumnName="EMPL_UID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

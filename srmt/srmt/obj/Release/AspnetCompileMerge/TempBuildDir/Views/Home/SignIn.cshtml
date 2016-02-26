@@ -1,0 +1,69 @@
+﻿@model srmt.ViewModel.SignIn
+@{
+    ViewBag.Title = "SignIn";
+}
+<div class="jumbotron">
+    <h3 class="text-center">Welcome to Service Request Management Tool</h3>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 center-block" style="width:100%;">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <h4>
+                    Welcome @ViewBag.UserName
+                </h4>
+
+                @Html.HiddenFor(model => model.uid)
+                @Html.HiddenFor(model => model.name)
+
+                <p>
+                    You are accessing a U.S. Government information system, which includes (1) this computer, (2) this computer network, (3) all computers connected to
+                    this network, and (4) all devices and storage media attached to this network or to a computer on this network.
+                    This information system is provided for U.S. Government-authorized use only. Unauthorized or improper use or access of this system may result in
+                    disciplinary action, as well as civil and criminal penalties.
+                </p>
+                <p>
+                    Unauthorized or improper use or access of this system may result in disciplinary action, as
+                    well as civil and criminal penalties.
+                </p>
+                <p>By using this information system, you understand and consent to the following: </p>
+                <p>
+                    <ul>
+                        <li>
+                            You have no reasonable expectation of privacy when you use this information system; this includes any communications or data transiting or
+                            stored on this information system.
+                        </li>
+                        <li>At any time, and for any lawful government purpose, the government may, without notice, monitor, intercept, search and seize any communication or data transiting or stored on this information system. </li>
+                        <li>
+                            The government may disclose or use any communications or data transiting, stored on, originated
+                            from or directed to or from this information system for any lawful government purpose.
+                        </li>
+                        <li>
+                            You are NOT authorized to process classified information on this information system.
+                        </li>
+                    </ul>
+                </p>
+                <div style="height:100px" class="text-center">
+                    <button type="submit" class="btn my-btn btn-lg">
+                        <span class="glyphicon glyphicon-log-in"></span> Sign-In
+                    </button>
+                    @*<input class="btn btn-primary text-center" type="submit" value="Sign In">*@
+                </div>
+                <div style="height:100px" class="text-center">
+                        if (ViewBag.count != null)
+                        {
+                            if (ViewBag.count == 0)
+                            {
+                                <p style="color:red;">You are not a valid SRMT user.</p>
+                            }
+                        }
+                </div>
+            }
+            </div>
+     </div>
+</div>
+        <div class="container table-bordered img-rounded">
+        </div>

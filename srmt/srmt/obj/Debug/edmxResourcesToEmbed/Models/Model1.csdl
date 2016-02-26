@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProfileModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CRIS_USER">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="LOGIN_NAME" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="USER_PASSWORD" Type="Binary" MaxLength="512" FixedLength="false" Nullable="false" />
+    <Property Name="USER_EMAIL" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
+    <Property Name="RETRY_ATTEMPTS" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="USER_STATUS" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CREATED_BY" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CREATED_DATE" Type="DateTime" Nullable="false" />
+    <Property Name="LAST_UPDATE_BY" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="LAST_UPDATE_DATE" Type="DateTime" Nullable="false" />
+    <Property Name="PASSWORD_CHANGE_DATE" Type="DateTime" />
+    <Property Name="PASSWORD_EXP_DATE" Type="DateTime" />
+    <Property Name="USER_QUESTION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ENC_DEC_KEY" Type="Binary" MaxLength="32" FixedLength="false" Nullable="false" />
+    <Property Name="USER_ANSWER" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EMPLOYEE">
+    <Key>
+      <PropertyRef Name="EMPL_ID" />
+    </Key>
+    <Property Name="EMPL_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="EMPL_TYPE_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="SERV_CENTER_ID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="OFFICE_ID" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="FCO_DESIGN_CD" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EMPL_ZIPCODE" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="EMPL_FNAME" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMPL_MNAME" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="EMPL_LNAME" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMPL_SSN" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="EMPL_TITLE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMPL_SUPERVISOR" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="EMPL_WORK_PH_NUM" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMPL_HOME_PH_NUM" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EMPL_WORK_FAX_NUM" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="EMPL_EMAIL_ADDR" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EMPL_DOB" Type="DateTime" />
+    <Property Name="EMPL_MOTHER_NM" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="EMPL_STATUS" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="USER_ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CREATED_BY" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="CREATED_DATE" Type="DateTime" />
+    <Property Name="LAST_UPDATED_BY" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="LAST_UPDATED_DATE" Type="DateTime" />
+    <Property Name="EMPL_UID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="CRIDBAEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CRIS_USER" EntityType="Self.CRIS_USER" />
+    <EntitySet Name="EMPLOYEEs" EntityType="Self.EMPLOYEE" />
+  </EntityContainer>
+</Schema>

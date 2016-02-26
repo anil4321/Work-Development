@@ -1,0 +1,109 @@
+@using System.Web.Mvc.Html
+@{
+    ViewBag.Title = "Index";
+}
+<style type="text/css">
+
+</style>
+
+<div style="height:100px">
+    <h5 class="text-center">SRMT Profile</h5>
+</div>
+
+<div class="row">
+    @*<div class="col-md-8">
+        <p>
+            <h4>Warning!</h4>
+        </p>
+        <p>
+            You are accessing a U.S. Government information system, which includes (1) this computer, (2) this computer network, (3) all computers connected to
+            this network, and (4) all devices and storage media attached to this network or to a computer on this network.
+            This information system is provided for U.S. Government-authorized use only. Unauthorized or improper use or access of this system may result in
+            disciplinary action, as well as civil and criminal penalties.
+        <p>
+            Unauthorized or improper use or access of this system may result in disciplinary action, as
+            well as civil and criminal penalties.
+        </p>
+        </p>
+        <p>By using this information system, you understand and consent to the following: </p>
+        <p>
+            <ul>
+                <li>
+                    You have no reasonable expectation of privacy when you use this information system; this includes any communications or data transiting or
+                    stored on this information system.
+                </li>
+                <li>At any time, and for any lawful government purpose, the government may, without notice, monitor, intercept, search and seize any communication or data transiting or stored on this information system. </li>
+                <li>
+                    The government may disclose or use any communications or data transiting, stored on, originated
+                    from or directed to or from this information system for any lawful government purpose.
+                </li>
+                <li>
+                    You are NOT authorized to process classified information on this information system.
+                </li>
+            </ul>
+        </p>
+    </div>
+    <br />*@
+    <form role="form">
+        <div class="container">
+            <div class="row">
+                <div class="list-group">
+                    <p class="list-group-item-heading">My Profile</p>
+                    @Html.Hidden("hdnFlag", (object)Convert.ToInt32(ViewBag.page_Count))
+                    @{
+                        List<srmt.Models.CRIS_USER> items = ViewBag.crisUser;
+                        if (items.Count == 0)
+                        {
+                            <text>You are not a valid SRMT user.</text>
+                        }
+                        else {
+                            foreach (var item in ViewBag.crisUser)
+                            {
+                                if (item.USER_STATUS == "A")
+                                {
+                                    @Html.ActionLink((string)item.LOGIN_NAME, "Detail", new { id = (string)item.LOGIN_NAME }, new { @title = "Click here to access " + @item.LOGIN_NAME, @class = "list-group-item text-center" })
+                                }
+                                else
+                                {
+                                    @Html.ActionLink((string)item.LOGIN_NAME, "Detail", new { id = (string)item.LOGIN_NAME }, new { @title = "Your profile " + @item.LOGIN_NAME + " is inactive", @class = "list-group-item text-center disabled" })
+                                }
+
+                            }
+                        }
+                    }
+
+
+
+
+
+
+                </div>
+        </div>
+        </div>
+                @*<h4 class="text-center">@ViewBag.UserName</h4>
+                    <div class="list-group">
+                        <h5 class="list-group-item-heading text-center disabled">My Profile</h5>
+                        @Html.Hidden("hdnFlag", (object)Convert.ToInt32(ViewBag.page_Count))
+                        @{
+                            List<srmt.Models.CRIS_USER> items = ViewBag.crisUser;
+                            if (items.Count == 0)
+                            {
+                                <text>You are not a valid SRMT user.</text>
+                            }
+                            else {
+                                foreach (var item in ViewBag.crisUser)
+                                {
+                                    if (item.USER_STATUS == "A")
+                                    {
+                                        @Html.ActionLink((string)item.LOGIN_NAME, "Detail", new { id = (string)item.LOGIN_NAME }, new { @title = "Click here to access " + @item.LOGIN_NAME, @class = "list-group-item text-center glyphicon glyphicon-plus-sign" })
+                                    }
+                                    else
+                                    {
+                                        @Html.ActionLink((string)item.LOGIN_NAME, "Detail", new { id = (string)item.LOGIN_NAME }, new { @title = "Your profile " + @item.LOGIN_NAME + " is inactive", @class = "list-group-item text-center disabled" })
+                                    }
+
+                                }
+                            }
+                        }
+                    </div>*@
+    </form>

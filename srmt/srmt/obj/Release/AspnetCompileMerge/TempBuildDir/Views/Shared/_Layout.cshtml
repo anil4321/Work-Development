@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<script>
+    //session end
+    @*var sessionTimeoutWarning = @Session.Timeout- 1;
+
+    var sTimeout = parseInt(sessionTimeoutWarning) * 60 * 1000;
+    setTimeout('SessionEnd()', sTimeout);
+
+    function SessionEnd() {
+        window.location.reload = "/Home/LogOff";
+    }*@
+
+    var sessionTimeoutWarning = @Session.Timeout - 5;
+    var sessionTimeout = @Session.Timeout;
+    var timeOnPageLoad = new Date();
+    var sessionWarningTimer = null;
+    var redirectToWelcomePageTimer = null;
+    //For warning
+    var sessionWarningTimer = setTimeout('SessionWarning()',
+            parseInt(sessionTimeoutWarning) * 60 * 1000);
+    //To redirect to the welcome page
+    var redirectToWelcomePageTimer = setTimeout('RedirectToWelcomePage()',
+                parseInt(sessionTimeout) * 60 * 1000);
+
+    //Session Warning
+    function SessionWarning() {
+        //minutes left for expiry
+        var minutesForExpiry = (parseInt(sessionTimeout) -
+                parseInt(sessionTimeoutWarning));
+        var message = "Your session will expire in another " +
+        minutesForExpiry + " mins. Do you want to extend the session?";
+
+        //Confirm the user if he wants to extend the session
+        answer = confirm(message);
+
+        //if yes, extend the session.
+        if (answer) {
+            var img = new Image(1, 1);
+            img.src = '/srmt/Home/SignIn' + escape(new Date());
+
+            //Clear the RedirectToWelcomePage method
+            if (redirectToWelcomePageTimer != null) {
+                clearTimeout(redirectToWelcomePageTimer);
+            }
+            //reset the time on page load
+            timeOnPageLoad = new Date();
+            sessionWarningTimer = setTimeout('SessionWarning()',
+            parseInt(sessionTimeoutWarning) * 60 * 1000);
+            //To redirect to the welcome page
+            redirectToWelcomePageTimer = setTimeout
+            ('RedirectToWelcomePage()', parseInt(sessionTimeout) * 60 * 1000);
+        }
+
+        //*************************
+        //Even after clicking ok(extending session) or cancel button, 
+        //if the session time is over. Then exit the session.
+        var currentTime = new Date();
+        //time for expiry
+        var timeForExpiry = timeOnPageLoad.setMinutes(timeOnPageLoad.getMinutes() +
+            parseInt(sessionTimeout));
+
+        //Current time is greater than the expiry time
+        if (Date.parse(currentTime) > timeForExpiry) {
+            alert("Session expired. You will be redirected to welcome page");
+            window.location = "/srmt/Home/LogOff";
+        }
+        //**************************
+    }
+
+    //Session timeout
+    function RedirectToWelcomePage() {
+        alert("Session expired. You will be redirected to welcome page");
+        window.location.reload = "/srmt/Home/LogOff";
+    }
+
+</script>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title SRMT - Service Request Management Tool</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+    <body>
+        <style>
+            ul.nav li a, ul.nav li a:visited {
+                color: #000000 !important;
+            }
+
+                ul.nav li a:hover, ul.nav li a:active {
+                    color: #0026ff !important;
+                }
+
+            ul.nav li.active a {
+                color: #000000 !important;
+            }
+        </style>
+        <link href="~/Content/style-main-emp.css" rel="stylesheet" />
+        <div class="nav navbar-fixed-top navbar-static-top">
+            <table border="0" cellspacing="0" width="800">
+                <tr>
+                    <td>
+                        <!-- This table sets up the top page header. -->
+                        <table border="0" cellspacing="0" cellpadding="0" width="800">
+                            <tr valign="top">
+                                <td align="right" valign="middle" height="90" background="~/Images/dhs-header-bkgd.jpeg" bgcolor="#000066">
+                                    <!-- Mark Laing SCR 11777 - Changed ALT text for both images -->
+                                    <img src="~/Images/DHS_Color_S.gif" valign="top" align="right" alt="U.S. Department of Homeland Security seal" /><br />
+                                    <div align="right">
+                                        <img src="~/Images/title.gif" alt="U.S. Citizenship &amp; Immigration Services Service Request Management" />
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </table>
+                        <ul id="topLevelNavigation" class="srmtNavigation">
+                            <li>&nbsp;</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100%" valign="top" align="left" id="content">
+                        <a name="content"> </a>
+                        <table width="100%" cellspacing="4" cellpadding="0" border="0">
+                            <tr align="center">
+                                <td valign="top" width="30%">
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <div class="push"></div>
+        </div>
+
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer class="footer navbar-fixed-bottom">
+                <p class="text-center">&copy; @DateTime.Now.Year - USCIS Service Request Management Tool (SRMT)</p>
+                <ul class="nav">
+                    <li>
+                        <a class="text-center" href="http://www.uscis.gov/portal/site/uscis/menuitem.eb1d4c2a3e5b9ac89243c6a7543f6d1a/?vgnextoid=5491b669ff2c3210VgnVCM100000b92ca60aRCRD&vgnextchannel=5491b669ff2c3210VgnVCM100000b92ca60aRCRD" title="Click here to access the Accessibility Document">
+                            <h5 class="text-center">Accessibility</h5>
+                        </a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>
+
+

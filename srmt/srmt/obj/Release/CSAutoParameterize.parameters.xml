@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="OraAspNetConString-Web.config Connection String" description="OraAspNetConString Connection String used in web.config by the application to access the database." defaultValue="User Id=devuser1;Password=devuser1;Data Source=CRISDEV1" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\CRIS\\Development\\SRMT-master\\srmt\\srmt\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='OraAspNetConString']/@connectionString" />
+  </parameter>
+  <parameter name="Entities-Web.config Connection String" description="Entities Connection String used in web.config by the application to access the database." defaultValue="provider=Oracle.ManagedDataAccess.Client;provider connection string=&quot;DATA SOURCE=CRISDEV1;PASSWORD=devuser1;User Id=devuser1&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\CRIS\\Development\\SRMT-master\\srmt\\srmt\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Entities']/@connectionString" />
+  </parameter>
+  <parameter name="ProfileEntities-Web.config Connection String" description="ProfileEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.ProfileModel.csdl|res://*/Models.ProfileModel.ssdl|res://*/Models.ProfileModel.msl;provider=Oracle.ManagedDataAccess.Client;provider connection string=&quot;DATA SOURCE=CRISDEV1;PASSWORD=devuser1;User Id=devuser1&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\CRIS\\Development\\SRMT-master\\srmt\\srmt\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ProfileEntities']/@connectionString" />
+  </parameter>
+  <parameter name="CRIDBAEntities-Web.config Connection String" description="CRIDBAEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.Model1.csdl|res://*/Models.Model1.ssdl|res://*/Models.Model1.msl;provider=Oracle.ManagedDataAccess.Client;provider connection string=&quot;DATA SOURCE=CRISDEV1;PASSWORD=devuser1;User Id=devuser1&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\CRIS\\Development\\SRMT-master\\srmt\\srmt\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CRIDBAEntities']/@connectionString" />
+  </parameter>
+</parameters>

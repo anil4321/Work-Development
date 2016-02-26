@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CRIS_USER">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="LOGIN_NAME" Type="varchar2" MaxLength="64" Nullable="false" />
+    <Property Name="USER_PASSWORD" Type="raw" MaxLength="512" Nullable="false" />
+    <Property Name="USER_EMAIL" Type="varchar2" MaxLength="55" />
+    <Property Name="RETRY_ATTEMPTS" Type="number" Precision="38" Scale="0" />
+    <Property Name="USER_STATUS" Type="varchar2" MaxLength="2" Nullable="false" />
+    <Property Name="CREATED_BY" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CREATED_DATE" Type="date" Nullable="false" />
+    <Property Name="LAST_UPDATE_BY" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="LAST_UPDATE_DATE" Type="date" Nullable="false" />
+    <Property Name="PASSWORD_CHANGE_DATE" Type="date" />
+    <Property Name="PASSWORD_EXP_DATE" Type="date" />
+    <Property Name="USER_QUESTION" Type="varchar2" MaxLength="255" />
+    <Property Name="USER_ANSWER" Type="varchar2" MaxLength="255" />
+    <Property Name="ENC_DEC_KEY" Type="raw" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EMPLOYEE">
+    <Key>
+      <PropertyRef Name="EMPL_ID" />
+    </Key>
+    <Property Name="EMPL_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="EMPL_TYPE_ID" Type="varchar2" MaxLength="2" />
+    <Property Name="SERV_CENTER_ID" Type="varchar2" MaxLength="3" />
+    <Property Name="OFFICE_ID" Type="number" Precision="38" Scale="0" />
+    <Property Name="FCO_DESIGN_CD" Type="varchar2" MaxLength="255" />
+    <Property Name="EMPL_ZIPCODE" Type="varchar2" MaxLength="64" />
+    <Property Name="EMPL_FNAME" Type="varchar2" MaxLength="64" Nullable="false" />
+    <Property Name="EMPL_MNAME" Type="varchar2" MaxLength="64" />
+    <Property Name="EMPL_LNAME" Type="varchar2" MaxLength="64" Nullable="false" />
+    <Property Name="EMPL_SSN" Type="varchar2" MaxLength="64" />
+    <Property Name="EMPL_TITLE" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="EMPL_SUPERVISOR" Type="varchar2" MaxLength="64" />
+    <Property Name="EMPL_WORK_PH_NUM" Type="varchar2" MaxLength="64" Nullable="false" />
+    <Property Name="EMPL_HOME_PH_NUM" Type="varchar2" MaxLength="64" Nullable="false" />
+    <Property Name="EMPL_WORK_FAX_NUM" Type="varchar2" MaxLength="64" />
+    <Property Name="EMPL_EMAIL_ADDR" Type="varchar2" MaxLength="255" />
+    <Property Name="EMPL_DOB" Type="date" />
+    <Property Name="EMPL_MOTHER_NM" Type="varchar2" MaxLength="64" />
+    <Property Name="EMPL_STATUS" Type="varchar2" MaxLength="64" Nullable="false" />
+    <Property Name="USER_ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CREATED_BY" Type="number" Precision="38" Scale="0" />
+    <Property Name="CREATED_DATE" Type="date" />
+    <Property Name="LAST_UPDATED_BY" Type="number" Precision="38" Scale="0" />
+    <Property Name="LAST_UPDATED_DATE" Type="date" />
+    <Property Name="EMPL_UID" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="CRIS_USER" EntityType="Self.CRIS_USER" Schema="SYSTEM" store:Type="Tables" />
+    <EntitySet Name="EMPLOYEE" EntityType="Self.EMPLOYEE" Schema="SYSTEM" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
