@@ -1,6 +1,8 @@
-﻿using Oracle.ManagedDataAccess.Client;
+using Oracle.ManagedDataAccess.Client;
+using Oracle.ManagedDataAccess.Types;
 using System;
 using System.Configuration;
+using System.Data;
 using System.Xml.Serialization;
 namespace CreateXMLfromDB
 {
@@ -10,6 +12,7 @@ namespace CreateXMLfromDB
         private const string connectionString = "User Id={0};Password={1};Data Source=XE;";
         private const string OracleDBUser = "hr";
         private const string OracleDBPassword = "hr";
+        private static OracleTransaction transaction;
 
         private void Close()
         {
@@ -65,7 +68,7 @@ namespace CreateXMLfromDB
             {
                 reader.Close();
             }
-            ot.Close();
+            //ot.Close();
             Console.WriteLine(empls.toXML());
 
 
@@ -94,7 +97,37 @@ namespace CreateXMLfromDB
                 Console.WriteLine(n.body);
             }
 
+            /*
+             * Insert CLOB 
+             */
+            // Start a local transaction
+            OracleTransaction transaction = _con.BeginTransaction(IsolationLevel.ReadCommitted);
+            string insertquery = "Insert into hr.note (id) VALUES (3)";
+            OracleCommand command = _con.CreateCommand();
+            command.Transaction = transaction;
 
+            command.CommandText = "INSERT INTO hr.note (id, xmldata) values (:id, :xmldata)";
+            try
+            {
+                
+                {
+                    byte[] newvalue = System.Text.Encoding.Unicode.GetBytes(xmlstring);
+                    OracleClob clob = new OracleClob(_con);
+                    clob.Write(newvalue, 0, newvalue.Length);
+                    command.Parameters.Add(new OracleParameter("id", 10));
+                    command.Parameters.Add(new OracleParameter("xmldata", clob));
+                    command.ExecuteNonQuery();
+                    transaction.Commit();
+                    Console.WriteLine("Both records are written to database."); 
+                    _con.Close();
+                }
+            }
+            catch (Exception e)
+            {
+                transaction.Rollback();
+                Console.WriteLine(e.ToString());
+                Console.WriteLine("Neither record was written to database.");
+            }
         }
 
         public static T Deserialize<T>(string xmlText)
