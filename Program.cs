@@ -1,59 +1,114 @@
-﻿using Spire.Pdf;
-using Spire.Pdf.Graphics;
-using Spire.Pdf.Security;
+﻿using Oracle.ManagedDataAccess.Client;
 using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PrintPDF
+using System.Configuration;
+using System.Xml.Serialization;
+namespace CreateXMLfromDB
 {
     class Program
     {
+        private static OracleConnection _con;
+        private const string connectionString = "User Id={0};Password={1};Data Source=XE;";
+        private const string OracleDBUser = "hr";
+        private const string OracleDBPassword = "hr";
+
+        private void Close()
+        {
+            if (_con != null)
+            {
+                _con.Close();
+                _con.Dispose();
+                _con = null;
+            }
+        }
+
+        private void InitializeDBConnection()
+        {
+            try
+            {
+                _con = new OracleConnection();
+                _con.ConnectionString = string.Format(connectionString, OracleDBUser, OracleDBPassword);
+                _con.Open();
+            }
+            catch (OracleException e)
+            {
+                string errorMessage = "Code: " + e.ErrorCode + "\n" +
+                                      "Message: " + e.Message;
+
+                System.Diagnostics.EventLog log = new System.Diagnostics.EventLog();
+                log.Source = "My Application";
+                log.WriteEntry(errorMessage);
+                Console.WriteLine("An exception occurred. Please contact your system administrator.");
+            }
+        }
         static void Main(string[] args)
         {
+            Program ot = new Program();
+
+            ot.InitializeDBConnection();
+            string sql = "select employee_id,first_name, last_name from HR.employees where employee_id < "+" 105 and first_name like '%A%'";
+            OracleCommand cmd = new OracleCommand(sql, _con);
+            OracleDataReader reader = cmd.ExecuteReader();
+            Employees empls = new Employees();
+            try
+            {
+                while (reader.Read())
+                {
+                    Employee empl = new Employee();
+                    empl.employeeID = reader.IsDBNull(0) ? 0 : reader.GetInt32(0);
+                    empl.firstName = reader.IsDBNull(1) ? null: reader.GetString(1);
+                    empl.lastName = reader.IsDBNull(2) ? null : reader.GetString(2);
+                    //Console.WriteLine(reader.GetValue(0) + " "+ reader.GetValue(1) + "  "+ reader.GetValue(2));
+                    empls.Add(empl);
+                }
+            }
+            finally
+            {
+                reader.Close();
+            }
+            ot.Close();
+            Console.WriteLine(empls.toXML());
+
+
             /*
-            string text = File.ReadAllText("TestDocument.txt");
-            PdfDocument doc = new PdfDocument();
-            PdfSection section = doc.Sections.Add();
-            PdfPageBase page = section.Pages.Add();
-            PdfFont font = new PdfFont(PdfFontFamily.Helvetica, 11);
-            PdfStringFormat format = new PdfStringFormat();
-            format.LineSpacing = 20f;
-            PdfBrush brush = PdfBrushes.Black;
-            PdfTextWidget textWidget = new PdfTextWidget(text, font, brush);
-            float y = 0;
-            PdfTextLayout textLayout = new PdfTextLayout();
-            textLayout.Break = PdfLayoutBreakType.FitPage;
-            textLayout.Layout = PdfLayoutType.Paginate;
-            RectangleF bounds = new RectangleF(new PointF(0, y), page.Canvas.ClientSize);
-            textWidget.StringFormat = format;
-            textWidget.Draw(page, bounds, textLayout);
-            doc.SaveToFile("TxtToPDf.pdf", FileFormat.PDF);
+             * Get the response from the Web Service 
+             * Deserialize and create rows in the database
+             * 
             */
+            String xmlstring = @"   <notes>
+                                    <note>
+                                    <to>Tove</to>
+                                    <from>Jane</from>
+                                    <heading>Reminder</heading>
+                                    <body>Don't forget me this weekend!</body>
+                                    </note>
+                                    <note>
+                                    <to>Doe</to>
+                                    <from>John</from>
+                                    <heading>Meeting</heading>
+                                    <body>Hello Monday!</body>
+                                    </note>
+                                    </notes>";
+            notes result = Deserialize<notes>(xmlstring);
+            foreach (notesNote n in result.note)
+            {
+                Console.WriteLine(n.body);
+            }
 
 
+        }
 
-
-
-            PdfDocument pdf = new PdfDocument(@"C:\Anil\TestFile.pdf");
-
-            //Add a page  
-           PdfPageBase page = pdf.Pages.Add();
-
-            //Insert text  
-            page.Canvas.DrawString("This document is protected with user password ", new PdfFont(PdfFontFamily.Helvetica, 13f), PdfBrushes.Black, PointF.Empty);
-
-            //Specify encryption level (algorithm)  
-            pdf.Security.KeySize = PdfEncryptionKeySize.Key128Bit;
-
-            //Add owner password  
-            pdf.Security.UserPassword = "ownerpassword";
-
-            //Save the document  
-            pdf.SaveToFile(@"c:\anil\Userpassword.pdf");
+        public static T Deserialize<T>(string xmlText)
+        {
+            try
+            {
+                var stringReader = new System.IO.StringReader(xmlText);
+                var serializer = new XmlSerializer(typeof(T));
+                return (T)serializer.Deserialize(stringReader);
+            }
+            catch
+            {
+                throw;
+            }
         }
     }
 }
